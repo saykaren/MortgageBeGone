@@ -1,8 +1,10 @@
-import React from 'react';
+import React, {useState} from 'react';
 import logo from '../Assests/logo.svg';
 import '../Styling/App.scss';
 
 function App() {
+    const [counter, setCounter] = useState(0);
+
     return (
         <div className="App">
             <header className="App-header">
@@ -18,9 +20,22 @@ function App() {
                 >
                     Learn React
                 </a>
+                <Counter counter={counter}/>
             </header>
         </div>
     );
 }
+
+interface CounterProps {
+    counter: number;
+}
+
+export const Counter = ({counter}:CounterProps) =>{
+return(
+    <div>
+        <p>{counter}</p>
+    </div>
+)
+};
 
 export default App;
