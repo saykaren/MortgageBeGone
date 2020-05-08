@@ -1,40 +1,139 @@
 @import './variables.scss';
+@import './Footer';
+@import './Modal';
 
 .App {
   text-align: center;
+  color: $secondary-color;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.amounts {
+  margin: 1em;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: left;
 }
 
-.App-link {
-  color: #61dafb;
+button {
+  background-color: white;
+  color: $primary-color;
+  box-shadow: 3px 2px 4px $secondary-color;
+  border-radius: 5px;
+  margin: 5px;
+  border: 2px solid $secondary-color;
+  padding: 7px;
+}
+.bar {
+  display: flex;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+#columns {
+  display: flex;
+}
+
+.dataSection {
+  padding: 1em;
+  background-color: $primary-color;
+  margin: 1em;
+  flex: 1;
+  flex-wrap: wrap;
+}
+
+.dataForm {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: white;
+  flex: 1;
+  margin: 1em;
+}
+.detailsColumn {
+  margin: 1em;
+  padding: 1em;
+}
+#flexTable {
+  border: 1px solid black;
+  background-color: white;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.headerCalc {
+  width: 100%;
+  color: $primary-color;
+}
+
+html {
+  background-color: $primary-color;
+}
+.inputForm {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: white;
+  flex: 1;
+}
+
+#inputSection {
+  display: flex;
+  padding: 1em;
+}
+
+//class
+.inputSection {
+  padding: 1em;
+  background-color: $primary-color;
+  margin: 1em;
+  flex: 1;
+}
+
+.growGraph {
+  display: flex;
+  height: 100px;
+  justify-content: space-around;
+  align-items: flex-end;
+}
+
+.negative {
+  color: red;
+  font-weight: bold;
+}
+
+.positive {
+  color: lawngreen;
+  font-weight: bolder;
+  text-shadow: 2px 2px $primary-color;
+}
+
+.positiveLarge {
+  color: lawngreen;
+  font-weight: bolder;
+  text-shadow: 2px 2px $primary-color;
+  margin: 1em;
+}
+
+#table {
+  border: 1px solid black;
+  background-color: white;
+
+  thead,
+  tbody {
+    padding: 15px;
+    text-align: center;
+    border: 1px solid black;
+    background-color: $primary-color;
   }
-  to {
-    transform: rotate(360deg);
-  }
+}
+
+.tableCell {
+  padding: 15px;
+  text-align: center;
+  border: 1px solid black;
+  background-color: $primary-color;
+  margin: 4px;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+.title {
+  margin: 1em;
 }
