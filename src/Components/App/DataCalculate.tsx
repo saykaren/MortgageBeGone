@@ -16,17 +16,17 @@ const DataCalculate: React.FC = () => {
     const [extraPayment, setExtraPayment] = useState<number>(1000);
 
     //Extra payment
-    const [extraPrincipalPaidArray, setExtraPrincipalPaidArray] = useState<[] | null>([]);
-    const [extraInterestPaidArray, setExtraInterestPaidArray] = useState<[] | null>([]);
+    const [extraPrincipalPaidArray, setExtraPrincipalPaidArray] = useState([]);
+    const [extraInterestPaidArray, setExtraInterestPaidArray] = useState([]);
     const [
         extraNewEndingPrincipalArray,
         setExtraNewEndingPrincipalArray,
-    ] = useState<[] | null>([]);
+    ] = useState<[]>([]);
 
     //Update Input
-    const [principalPaidArray, setPrincipalPaidArray] = useState<[] | null>([]);
-    const [interestPaidArray, setInterestPaidArray] = useState<[] | null>([]);
-    const [newEndingPrincipalArray, setNewEndingPrincipalArray] = useState<[] | any[]>([]);
+    const [principalPaidArray, setPrincipalPaidArray] = useState([]);
+    const [interestPaidArray, setInterestPaidArray] = useState([]);
+    const [newEndingPrincipalArray, setNewEndingPrincipalArray] = useState([]);
 
     // Modal
     const [modal, setModal] = useState<boolean>(false);
@@ -75,7 +75,7 @@ const DataCalculate: React.FC = () => {
     };
 
     const handleReset = (e: string, setEvent: (arg1:number)=>void) => {
-        let result = parseFloat(e);
+        const result = parseFloat(e);
         setEvent(result);
     };
 
@@ -130,35 +130,6 @@ const DataCalculate: React.FC = () => {
         (interestPaidArray.length - extraInterestPaidArray.length) % 12;
 
     let savedTotalPaid = Math.floor(totalPaidToBank - extraTotalPaidToBank);
-
-//     interface InputLabelOneProps {
-//     handleReset: (arg1:string, arg2:(arg1:number)=>void)=>void;
-//     title: string;
-//     arrayCheck: [];
-//     value: string;
-//     setProperty: (arg1:number)=>void;
-// }
-//     const InputLabelOne = ({
-//                                handleReset,
-//                                title,
-//                                arrayCheck,
-//                                value,
-//                                setProperty,
-//                            }: InputLabelOneProps) => {
-//         return (
-//             <label className="inputSection">
-//                 {title}:
-//                 {(arrayCheck.length <= 1 && (
-//                     <input
-//                         type="number"
-//                         name="Mortgage"
-//                         value={value}
-//                         onChange={(e) => handleReset(e.currentTarget.value, setProperty)}
-//                     ></input>
-//                 )) || <span>{value}</span>}
-//             </label>
-//         );
-//     };
 
     return (
         <section className="App">
