@@ -2,17 +2,17 @@
 import NumberConverter from './NumberConverter';
 
 interface ExtraPaymentCalculationProps {
-    extraNewEndingPrincipalArray: [] | null;
-    interestRate: string;
-    setModal: ()=>void;
-    extraPayment: string;
-    monthlyPayment: string;
-    extraPrincipalPaidArray: [] | null;
-    setExtraPrincipalPaidArray: [] | null;
-    extraInterestPaidArray: [] | null;
-    setExtraInterestPaidArray: ()=>void;
-    setExtraNewEndingPrincipalArray: ()=>void;
-    principal: string;
+    extraNewEndingPrincipalArray: number[];
+    interestRate: number;
+    setModal: (arg: boolean)=>void;
+    extraPayment: number;
+    monthlyPayment: number;
+    extraPrincipalPaidArray: number[];
+    setExtraPrincipalPaidArray: ([])=>void;
+    extraInterestPaidArray: number[];
+    setExtraInterestPaidArray: ([])=>void;
+    setExtraNewEndingPrincipalArray: ([])=>void;
+    principal: number;
 }
 
 const ExtraPaymentCalculation = ({
@@ -67,7 +67,7 @@ const ExtraPaymentCalculation = ({
     };
 
     switch (true) {
-        case extraNewEndingPrincipalArray.length < 1:
+        case extraNewEndingPrincipalArray[0] ===0 :
             setExtraNewEndingPrincipalArray([principal]);
             break;
         case currentExtraPrincipal > monthlyPayment + extraPayment &&

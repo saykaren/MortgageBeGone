@@ -1,12 +1,12 @@
 import NumberConverter from './NumberConverter';
 
 interface GenerateCalculationProps {
-    newEndingPrincipalArray: T[];
+    newEndingPrincipalArray: number[];
     interestRate: number;
     monthlyPayment: number;
-    principalPaidArray: [];
+    principalPaidArray: number[];
     setPrincipalPaidArray: ([])=>void;
-    interestPaidArray: [];
+    interestPaidArray: number[];
     setInterestPaidArray: ([])=>void;
     setNewEndingPrincipalArray: ([])=>void;
     principal: number;
@@ -49,7 +49,7 @@ const GenerateCalculation = ({
     };
 
     switch (true) {
-        case newEndingPrincipalArray.length < 1:
+        case newEndingPrincipalArray[0] === 0:
             setNewEndingPrincipalArray([principal]);
             break;
         case currentPrincipal > monthlyPayment &&

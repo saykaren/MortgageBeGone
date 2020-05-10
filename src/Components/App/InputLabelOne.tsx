@@ -3,8 +3,8 @@ import React from "react";
 interface InputLabelOneProps {
     handleReset: (arg1:string, arg2:(arg1:number)=>void)=>void;
     title: string;
-    arrayCheck?: [];
-    value?: string;
+    arrayCheck?: number[];
+    value?: number;
     setProperty: (arg1:number)=>void;
 }
 const InputLabelOne = ({
@@ -17,7 +17,7 @@ const InputLabelOne = ({
     return (
         <label className="inputSection">
             {title}:
-            {(arrayCheck.length <= 1 && (
+            {(arrayCheck !==undefined && arrayCheck.length <= 2 && (
                 <input
                     type="number"
                     name="Mortgage"

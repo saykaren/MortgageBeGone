@@ -3,7 +3,7 @@ import React from "react";
 interface AmortizationColumnSetValueProps {
     title: string;
     copyValue: number
-    arr: [];
+    arr: number[];
 }
 
 const AmortizationColumnSetValue = ({title, copyValue, arr}: AmortizationColumnSetValueProps) => {

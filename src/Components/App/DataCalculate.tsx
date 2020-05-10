@@ -9,24 +9,26 @@ import InputLabelOne from "./InputLabelOne";
 import Modal from './Modal';
 
 const DataCalculate: React.FC = () => {
+
+
     // User Input
-    const [principal, setPrincipal] = useState<number>(172000);
-    const [interestRate, setInterestRate] = useState<number>(3.75);
-    const [monthlyPayment, setMonthlyPayment] = useState<number>(1500);
-    const [extraPayment, setExtraPayment] = useState<number>(1000);
+    const [principal, setPrincipal] = useState(172000);
+    const [interestRate, setInterestRate] = useState(3.75);
+    const [monthlyPayment, setMonthlyPayment] = useState(1500);
+    const [extraPayment, setExtraPayment] = useState(1000);
 
     //Extra payment
-    const [extraPrincipalPaidArray, setExtraPrincipalPaidArray] = useState([]);
-    const [extraInterestPaidArray, setExtraInterestPaidArray] = useState([]);
+    const [extraPrincipalPaidArray, setExtraPrincipalPaidArray] = useState([0]);
+    const [extraInterestPaidArray, setExtraInterestPaidArray] = useState([0]);
     const [
         extraNewEndingPrincipalArray,
         setExtraNewEndingPrincipalArray,
-    ] = useState<[]>([]);
+    ] = useState<number[]>([0]);
 
     //Update Input
-    const [principalPaidArray, setPrincipalPaidArray] = useState([]);
-    const [interestPaidArray, setInterestPaidArray] = useState([]);
-    const [newEndingPrincipalArray, setNewEndingPrincipalArray] = useState([]);
+    const [principalPaidArray, setPrincipalPaidArray] = useState([0]);
+    const [interestPaidArray, setInterestPaidArray] = useState([0]);
+    const [newEndingPrincipalArray, setNewEndingPrincipalArray] = useState([0]);
 
     // Modal
     const [modal, setModal] = useState<boolean>(false);
@@ -75,7 +77,7 @@ const DataCalculate: React.FC = () => {
     };
 
     const handleReset = (e: string, setEvent: (arg1:number)=>void) => {
-        const result = parseFloat(e);
+        let result = parseFloat(e);
         setEvent(result);
     };
 
@@ -149,7 +151,7 @@ const DataCalculate: React.FC = () => {
                     <InputLabelOne handleReset={handleReset} title={'Extra Monthly Payment'} arrayCheck={newEndingPrincipalArray} value={extraPayment} setProperty={setExtraPayment}/>
                 </form>
             </div>
-            {(newEndingPrincipalArray[newEndingPrincipalArray.length - 1] < 0 ||
+            {(newEndingPrincipalArray[newEndingPrincipalArray.length - 1] <= 1 ||
                 newEndingPrincipalArray[newEndingPrincipalArray.length - 1] ===
                 undefined) && <button onClick={() => calculate()}>Calculate</button>}
             <button onClick={() => window.location.reload()}>Reset Numbers</button>

@@ -4,9 +4,9 @@ import GraphAnalysis from './GraphAnalysis';
 import TimeAnalysis from './TimeAnalysis';
 
 interface DataAnaylsisProps {
-    interestPaidArray: [];
+    interestPaidArray: number[];
     mortgage: number;
-    extraInterestPaidArray: [];
+    extraInterestPaidArray: number[];
     extraTotalPaidToBank: number;
     totalPaidToBank: number;
 }

@@ -2,8 +2,8 @@ import React from "react";
 
 interface AmortizationColumnProps {
     title: string;
-    initialRow: string;
-    arr: [];
+    initialRow: string | number;
+    arr: number[];
 }
 
 const AmortizationColumn = ({title, initialRow, arr}: AmortizationColumnProps) => {
