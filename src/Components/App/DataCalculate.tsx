@@ -79,6 +79,15 @@ const DataCalculate: React.FC = () => {
     setEvent(result);
   };
 
+  const handleFullReset = () => {
+    setExtraPrincipalPaidArray([0]);
+    setExtraInterestPaidArray([0]);
+    setExtraNewEndingPrincipalArray([0]);
+    setPrincipalPaidArray([0]);
+    setInterestPaidArray([0]);
+    setNewEndingPrincipalArray([0]);
+  };
+
   useEffect(() => {
     if (
       newEndingPrincipalArray.length >= 1 &&
@@ -172,6 +181,11 @@ const DataCalculate: React.FC = () => {
       {(newEndingPrincipalArray[newEndingPrincipalArray.length - 1] <= 1 ||
         newEndingPrincipalArray[newEndingPrincipalArray.length - 1] ===
           undefined) && <button onClick={() => calculate()}>Calculate</button>}
+      {(newEndingPrincipalArray[newEndingPrincipalArray.length - 1] <= 1 ||
+        newEndingPrincipalArray[newEndingPrincipalArray.length - 1] ===
+          undefined) && (
+        <button onClick={() => handleFullReset()}>Update Calculations</button>
+      )}
       <button onClick={() => window.location.reload()}>Reset Numbers</button>
 
       {newEndingPrincipalArray.length > 2 && (
