@@ -1,23 +1,23 @@
 {
   "files": {
     "main.css": "/MortgageBeGone/static/css/main.787e3e8c.chunk.css",
-    "main.js": "/MortgageBeGone/static/js/main.859c7d01.chunk.js",
-    "main.js.map": "/MortgageBeGone/static/js/main.859c7d01.chunk.js.map",
+    "main.js": "/MortgageBeGone/static/js/main.56ae888d.chunk.js",
+    "main.js.map": "/MortgageBeGone/static/js/main.56ae888d.chunk.js.map",
     "runtime-main.js": "/MortgageBeGone/static/js/runtime-main.d219db84.js",
     "runtime-main.js.map": "/MortgageBeGone/static/js/runtime-main.d219db84.js.map",
-    "static/js/2.924f1239.chunk.js": "/MortgageBeGone/static/js/2.924f1239.chunk.js",
-    "static/js/2.924f1239.chunk.js.map": "/MortgageBeGone/static/js/2.924f1239.chunk.js.map",
+    "static/js/2.72fd8e7d.chunk.js": "/MortgageBeGone/static/js/2.72fd8e7d.chunk.js",
+    "static/js/2.72fd8e7d.chunk.js.map": "/MortgageBeGone/static/js/2.72fd8e7d.chunk.js.map",
     "index.html": "/MortgageBeGone/index.html",
-    "precache-manifest.b05831bd9e4f6c68f392b92382d43c32.js": "/MortgageBeGone/precache-manifest.b05831bd9e4f6c68f392b92382d43c32.js",
+    "precache-manifest.88a5c5f183e935827f3d0aa296566b70.js": "/MortgageBeGone/precache-manifest.88a5c5f183e935827f3d0aa296566b70.js",
     "service-worker.js": "/MortgageBeGone/service-worker.js",
     "static/css/main.787e3e8c.chunk.css.map": "/MortgageBeGone/static/css/main.787e3e8c.chunk.css.map",
-    "static/js/2.924f1239.chunk.js.LICENSE.txt": "/MortgageBeGone/static/js/2.924f1239.chunk.js.LICENSE.txt",
+    "static/js/2.72fd8e7d.chunk.js.LICENSE.txt": "/MortgageBeGone/static/js/2.72fd8e7d.chunk.js.LICENSE.txt",
     "static/media/sayKaren_logo-white_8.1.2019.png": "/MortgageBeGone/static/media/sayKaren_logo-white_8.1.2019.d0827d01.png"
   },
   "entrypoints": [
     "static/js/runtime-main.d219db84.js",
-    "static/js/2.924f1239.chunk.js",
+    "static/js/2.72fd8e7d.chunk.js",
     "static/css/main.787e3e8c.chunk.css",
-    "static/js/main.859c7d01.chunk.js"
+    "static/js/main.56ae888d.chunk.js"
   ]
 }
